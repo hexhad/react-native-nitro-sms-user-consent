@@ -1,6 +1,6 @@
 {
   "name": "react-native-nitro-sms-user-consent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "react-native-nitro-sms-user-consent — Android SMS User Consent API (one-tap OTP reading) for React Native, built with Nitro",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -28,6 +28,7 @@
     "android/build.gradle",
     "android/fix-prefab.gradle",
     "android/gradle.properties",
+    "android/proguard-rules.pro",
     "android/CMakeLists.txt",
     "android/src",
     "ios/**/*.h",

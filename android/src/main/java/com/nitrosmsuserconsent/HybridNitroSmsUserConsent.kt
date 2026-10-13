@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
+import androidx.annotation.Keep
 import androidx.core.content.ContextCompat
 import androidx.core.content.IntentCompat
 import com.facebook.react.bridge.ActivityEventListener
@@ -14,6 +15,7 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.common.LifecycleState
+import com.facebook.proguard.annotations.DoNotStrip
 import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
@@ -26,6 +28,11 @@ import com.margelo.nitro.nitrosmsuserconsent.HybridNitroSmsUserConsentSpec
 import com.margelo.nitro.nitrosmsuserconsent.SmsConsentEvent
 import com.margelo.nitro.nitrosmsuserconsent.SmsConsentStatus
 
+// Nitro instantiates this class from C++ through JNI, which R8 cannot see. Without these
+// annotations a minified release build strips the constructor, so no field initializer runs
+// and the first `synchronized(lock)` throws a NullPointerException.
+@DoNotStrip
+@Keep
 class HybridNitroSmsUserConsent : HybridNitroSmsUserConsentSpec() {
 
   private val lock = Any()
