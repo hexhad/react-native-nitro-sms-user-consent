@@ -177,6 +177,16 @@ None. Google Play services reads the SMS, and the app only receives the message 
 
 ---
 
+## AI agent skill
+
+[`skills/react-native-nitro-sms-user-consent`](./skills/react-native-nitro-sms-user-consent/SKILL.md) is an agent skill (Claude Code and other `SKILL.md`-compatible agents). It covers the hook, the SMS format, iOS autofill, migrating from otp-verify, and troubleshooting. To install it, copy or symlink the folder into `~/.claude/skills/`:
+
+```sh
+npx degit hexhad/react-native-nitro-sms-user-consent/skills/react-native-nitro-sms-user-consent ~/.claude/skills/react-native-nitro-sms-user-consent
+```
+
+---
+
 ## Credits
 
 Bootstrapped with [create-nitro-module](https://github.com/patrickkabwe/create-nitro-module).
