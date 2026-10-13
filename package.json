@@ -42,7 +42,10 @@
   "workspaces": [
     "example"
   ],
-  "repository": "https://github.com/hexhad/react-native-nitro-sms-user-consent.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexhad/react-native-nitro-sms-user-consent.git"
+  },
   "author": "hashan",
   "license": "MIT",
   "bugs": "https://github.com/hexhad/react-native-nitro-sms-user-consent/issues",
