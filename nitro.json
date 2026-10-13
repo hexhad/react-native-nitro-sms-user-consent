@@ -1,0 +1,30 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": [
+    "nitrosmsuserconsent"
+  ],
+  "ios": {
+    "iosModuleName": "NitroSmsUserConsent"
+  },
+  "android": {
+    "androidNamespace": [
+      "nitrosmsuserconsent"
+    ],
+    "androidCxxLibName": "NitroSmsUserConsent"
+  },
+  "autolinking": {
+    "NitroSmsUserConsent": {
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "HybridNitroSmsUserConsent"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "HybridNitroSmsUserConsent"
+      }
+    }
+  },
+  "ignorePaths": [
+    "**/node_modules"
+  ]
+}
